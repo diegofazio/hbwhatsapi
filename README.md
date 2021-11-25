@@ -16,8 +16,11 @@ Node server
 5) Set user/pass/host/port of Mysql DB( whatsapp_in and whatsapp_out ) in index.js
 6) Start server -> node index.js
 
-Client for HW_Apache
+Client for HW_Apache(http://www.hbtron.com/downloads.html)
 
 1) Copy client.* to htdocs
 2) Set user/pass/host/port of Mysql DB( whatsapp_in and whatsapp_out ) in client.prg
 3) Go to http://localhost/client.html
+
+# http://www.hbtron.com
+<img src="http://www.hbtron.com/hwtools512.png" width="250" title="hw_tools">
