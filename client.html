@@ -117,7 +117,7 @@
 
       function postdata(oPar) {
          var oResp = Object();
-         $.post("upload.prg", oPar)
+         $.post("client.prg", oPar)
             .done(function (response) {
                try {
                   oResp = JSON.parse(response);
