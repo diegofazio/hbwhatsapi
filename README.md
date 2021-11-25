@@ -1,5 +1,5 @@
 # hbWhatsapi
-Whatsapp <-> Harbour API via puppeteer - https://github.com/puppeteer/puppeteer
+Whatsapp <-> Harbour API via puppeteer/whatsapp-web.js
 
 
 ### How to install
