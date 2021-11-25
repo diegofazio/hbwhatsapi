@@ -40,7 +40,7 @@ const client1 = new Client({
 });
 
 client1.on('qr', qr => {
-   //   qrcode.generate(qr, { small: true });
+
    qrcode_file.toFile(QR_CODE, qr);
 
 });
