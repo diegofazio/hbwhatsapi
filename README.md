@@ -12,9 +12,11 @@ Node server
 2) Create folder and clone the repo
 3) Run inside folder created -> npm init -y 
 4) Run inside folder created -> npm install whatsapp-web.js qrcode
-5) Start server -> node index.js
+5) Set user/pass/host/port of Mysql DB( whatsapp_in and whatsapp_out ) in index.js
+6) Start server -> node index.js
 
 Client for HW_Apache
 
 1) Copy client.* to htdocs
-2) Go to http://localhost/client.html
+2) Set user/pass/host/port of Mysql DB in client.prg
+3) Go to http://localhost/client.html
