@@ -7,6 +7,11 @@
 #include "/usr/include/harbour/hbdyn.ch"
 #endif
 
+#define MYSQL_HOST "localhost"
+#define MYSQL_USER "harbour"
+#define MYSQL_PASS ""
+#define MYSQL_DB "harbourdb"
+#define MYSQL_PORT 3306
 
 FUNCTION Main()
 
@@ -62,7 +67,7 @@ FUNCTION Main()
    ENDIF
 
    IF hMySQL != 0
-      hConnection := mysql_real_connect( "localhost", "harbour", "", "harbourdb", 3306 )
+      hConnection := mysql_real_connect( MYSQL_HOST, MYSQL_USER, MYSQL_PASS, MYSQL_DB, MYSQL_PORT )
       If( hConnection != hMySQL )
          ? "Failed connection"
          ? mysql_error( hMySQL )
