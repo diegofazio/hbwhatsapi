@@ -20,7 +20,7 @@ Client for HW_Apache(http://www.hbtron.com/downloads.html)
 
 1) Copy client.* to htdocs
 2) Set user/pass/host/port of Mysql DB( whatsapp_in and whatsapp_out ) in client.prg
-3) Set the *1 folder created in SESSION_PATH
+3) Set the *1 folder created in SESSION_PATH in client.prg
 3) Go to http://localhost/client.html
 
 # http://www.hbtron.com
