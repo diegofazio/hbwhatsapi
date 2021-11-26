@@ -114,11 +114,9 @@ function checkNewMessage() {
          if (err) throw err;
          if (rows.length > 0) {
             var b64string = rows[0]['data'];
-            var buf = Buffer.from(b64string, 'binary');
             ID = rows[0]['ID'];
             if (rows[0]['mimetype'] == 'text') {
-               buf = Buffer.from(buf, 'base64');
-               msg = atob(buf.toString('utf8'));
+               msg = Buffer.from(b64string, 'base64').toString('utf8');
                client1.sendMessage(rows[0]['to'] + "@c.us", msg)
                   .then(response => {
                      if (response.id.fromMe) {
