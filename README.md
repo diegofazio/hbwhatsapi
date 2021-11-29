@@ -23,7 +23,7 @@ Client for HW_Apache(http://www.hbtron.com/downloads.html)
 3) Set the *1 folder created in SESSION_PATH in client.prg
 3) Go to http://localhost/client.html
 
-NOTE: If you use modharbour replace HW_WRITE -> AP_RWRITE in client.prg
+NOTE: If you use modharbour replace HW_WRITE -> AP_RWRITE, HW_POSTPAIRS -> AP_POSTPAIRS in client.prg
 
 # http://www.hbtron.com
 <img src="http://www.hbtron.com/hwtools512.png" width="250" title="hw_tools">
