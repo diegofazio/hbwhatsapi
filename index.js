@@ -24,19 +24,14 @@ const qrcode_file = require('qrcode')
 const QR_CODE = cPath + 'qrcode.png';
 const SESSION_FILE_PATH = cPath + 'session.json';
 
-const { Client } = require('whatsapp-web.js');
+const { Client, LocalAuth } = require('whatsapp-web.js');
 const { MessageMedia } = require('whatsapp-web.js');
 
 
 var connected = false;
 
-let sessionData;
-if (fs.existsSync(SESSION_FILE_PATH)) {
-   sessionData = require(SESSION_FILE_PATH);
-}
-
 const client1 = new Client({
-   session: sessionData,
+   authStrategy: new LocalAuth()
 });
 
 client1.on('qr', qr => {
@@ -47,18 +42,13 @@ client1.on('qr', qr => {
 
 client1.on('ready', () => {
    console.log('Conectado');
+   fs.writeFile(SESSION_FILE_PATH, 'INIT SESSION', function (err) {
+      if (err) throw err;
+      console.log('File is created successfully.');
+    });     
    deleteQR();
    connected = true;
 
-});
-
-client1.on('authenticated', (session) => {
-   sessionData = session;
-   fs.writeFileSync(SESSION_FILE_PATH, JSON.stringify(session), (err) => {
-      if (err) {
-         console.log('Error al guardar la sesión', err);
-      }
-   });
 });
 
 client1.on('auth_failure', msg => {
